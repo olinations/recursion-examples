@@ -10,13 +10,41 @@
   <div class="container">
     <h1>Recursion Examples</h1>
 
-    <h3>Basic Count Up</h3>
-      <div id="editor-basic-count-up">function foo(items) {
-      var i;
-      for (i = 0; i &lt; items.length; i++) {
-          alert("Ace Rocks " + items[i]);
-      }
-      }</div>
+    <h2>Basic Count Up</h2>
+    <p>This function logs/appends every number from start to end.</p>
+
+    <h3>Code</h3>
+    <div id="editor-basic-count-up">// Logs and appends every number from start to end
+var basicCountUp = function(start, end) {
+  
+  var current = start;
+
+  var basicCountUpRecursion = function(current, end) {
+    if (current <= end) {
+      console.log(current);
+      $('.basic-count-up-display').append('<div>' + current + '</div>');
+      current++;
+      basicCountUpRecursion(current, end);
+    }
+  };
+
+  basicCountUpRecursion(current, end);
+
+};
+
+// Example of calling basicCountUp
+// basicCountUp(3,11);</div>
+
+    <h3>Try it!</h3>
+      basicCountUp( 
+      <input type="text" class="form-control basic-count-up-input basic-count-up-start" placeholder="start"> , 
+      <input type="text" class="form-control basic-count-up-input basic-count-up-end" placeholder="end"> )
+      <br>
+      <button class="btn btn-primary basic-count-up-submit">Count up!</button>
+
+    <div class="basic-count-up-display">
+      <h4>basicCountUp results:</h4>
+    </div>
 
   </div>
   
