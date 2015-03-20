@@ -16,12 +16,11 @@
     <h3>Code</h3>
     <div id="editor-basic-count-up">// Appends every number from start to end
 var basicCountUp = function(start, end) {
-  
   var current = start;
+  $('.basic-count-up-display').html('');
 
   var basicCountUpRecursion = function(current, end) {
-    if (current <= end) {
-      console.log(current);
+    if (parseInt(current) <= parseInt(end)) {
       $('.basic-count-up-display').append('<div>' + current + '</div>');
       current++;
       basicCountUpRecursion(current, end);
@@ -30,10 +29,7 @@ var basicCountUp = function(start, end) {
 
   basicCountUpRecursion(current, end);
 
-};
-
-// Example of calling basicCountUp
-// basicCountUp(3,11);</div>
+};</div>
 
     <h3>Try it!</h3>
       basicCountUp( 
