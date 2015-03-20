@@ -1,4 +1,4 @@
-// Logs and appends every number from start to end
+// Appends every number from start to end
 var basicCountUp = function(start, end) {
   var current = start;
   $('.basic-count-up-display').html('');
